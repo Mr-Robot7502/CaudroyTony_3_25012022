@@ -1,0 +1,10 @@
+{
+    "name": "ocr_p3",
+    "version": "1.0.0",
+    "description": "Projet 3 d'Openclassroom",
+    "scripts": {
+        "sass": "sass ./assets/sass/main.scss:./assets/css/style.css",
+        "sass-watch": "sass --watch ./assets/sass/main.scss:./assets/css/style.css"
+    },
+    "author": "Tony CAUDROY"
+}

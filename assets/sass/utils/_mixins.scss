@@ -1,0 +1,20 @@
+@mixin border($color:$color-primary) {
+    border: .1rem solid $color;
+}
+
+@mixin btn {
+    padding: $grid-gutter;
+    @include border;
+    color: $color-primary;
+    background: $color-secondary;
+    cursor: pointer;
+    display: inline-block;
+    &:hover {
+        background: $color-primary;
+        color: $color-accent;
+    }
+    &--full-width {
+        width: 100%;
+        margin: 0 auto;
+    }
+}

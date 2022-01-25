@@ -1,0 +1,64 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+ 
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #ff0a99;
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.7;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 5rem;
+  font-style: italic;
+}
+
+textarea {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 2.75rem;
+}
+
+.btn {
+  padding: 1.5rem;
+  border: 0.1rem solid #ff0a99;
+  color: #ff0a99;
+  background: #001534;
+  cursor: pointer;
+  display: inline-block;
+}
+.btn:hover {
+  background: #ff0a99;
+  color: #D6FFF5;
+}
+.btn--full-width {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+/*# sourceMappingURL=style.css.map */
