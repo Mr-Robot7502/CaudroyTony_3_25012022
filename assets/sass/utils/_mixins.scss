@@ -2,19 +2,27 @@
     border: .1rem solid $color;
 }
 
+@mixin gradient($list, $direction: top) {
+    background: linear-gradient($direction, $list);
+}
+
 @mixin btn {
     padding: $grid-gutter;
-    @include border;
-    color: $color-primary;
-    background: $color-secondary;
+    color: $color-white;
+    border: none;
+    background: $color-gradient-primary;
     cursor: pointer;
     display: inline-block;
+    font-size: 1.6rem;
     &:hover {
-        background: $color-primary;
-        color: $color-accent;
+        background: $color-gradient-secondary;
+    }
+    &--rounded {
+        border-radius: 38px;
     }
     &--full-width {
         width: 100%;
         margin: 0 auto;
     }
+
 }

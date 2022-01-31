@@ -1,0 +1,28 @@
+
+
+.card_icon {
+    >p {
+        padding: 20px 15px
+    }
+    >i {
+        padding: 15px;
+        color: #7E7E7E
+    }
+    &__number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        border: none;
+        border-radius: 30px;
+        background: #9356DC;
+        color: #fff;
+        left: -15px;
+    }
+}
+
+// @include for-tablet { => mixin
+//     property: value;
+// }

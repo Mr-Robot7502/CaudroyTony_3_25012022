@@ -1,0 +1,78 @@
+.meal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  margin: 15px 0;
+  box-shadow: 5px 5px 5px 5px#E9E9E9;
+  text-overflow: ellipsis;
+  flex-wrap: nowrap;
+}
+
+.meal.price {
+  font-size: bold;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+  .functioning__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .functioning__list>h2 {
+    width: 100%;
+  }
+
+  .functioning__card {
+    width: 28%;
+  }
+
+  .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .restaurants>h2 {
+    width: 100%;
+  }
+
+  .card {
+    width: 49%;
+  }
+
+}
+
+@media only screen and (min-width: 993px) {
+
+  .functioning__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .functioning__list>h2 {
+    width: 100%;
+  }
+
+  .functioning__card {
+    width: 28%;
+  }
+
+  .restaurants {
+    display: flex;
+  }
+
+  .restaurants>h2 {
+    width: 100%;
+  }
+
+  .card {
+    width: 22%;
+  }
+}
+  /*# sourceMapping URL=style.css.map */

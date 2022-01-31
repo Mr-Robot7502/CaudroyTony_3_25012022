@@ -1,0 +1,43 @@
+.card {
+    position: relative;
+    border-radius: 23px;
+    background: #fff;
+    margin: 10px 0;
+    box-shadow: 5px 5px 10px 1px #E9E9E9;
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 16px 16px 0 0;
+        img {
+            display: flex;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__label_new {
+        display: flex;
+        background: #99E2D0;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        position: absolute;
+        top: 15px;
+        right: 15px
+    }
+    &__description {
+        padding: 10px 20px;
+        background: #fff;
+        border-radius: 0 0 16px 16px;
+        position: relative;
+        >i {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            font-size: x-large;
+        }
+    }
+}

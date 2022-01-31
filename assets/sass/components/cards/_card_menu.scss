@@ -1,0 +1,16 @@
+.card_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 15px 0;
+    box-shadow: 5px 5px 5px 5px#E9E9E9;
+    text-overflow: ellipsis;
+    flex-wrap: nowrap;
+  }
+  .price {
+    font-size: bold;
+  }
+  

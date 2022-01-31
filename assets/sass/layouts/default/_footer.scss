@@ -1,0 +1,15 @@
+.footer {
+    background: #353535;
+    color: #fff;
+    padding: 30px;
+    &__link {
+        display: flex;
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20px;
+            margin-right: 10px;
+        }
+    }
+}
