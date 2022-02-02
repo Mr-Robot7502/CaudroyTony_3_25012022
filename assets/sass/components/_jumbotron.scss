@@ -5,9 +5,15 @@
     text-align: center;
     align-items: center;
     background-color: #f6f6f6;
-    padding: 43px 20px 55px 20px;
+    padding: 40px;
+&__title {
+    font-size: 25px;
+    padding:10px;
 }
-
+>p {
+    font-style: 17px;
+}
 .jumbotron>* {
     margin: 5px 0;
+}
 }

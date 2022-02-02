@@ -2,9 +2,11 @@
     background-color: #eaeaea;
     display: flex;
     justify-content: center;
-    padding: 10px
-}
-
-.place .place__icon {
+    padding: 10px;
+&__icon {
     margin-right: 8px;
+}
+&__city {
+    font-weight: 500;
+}
 }

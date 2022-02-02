@@ -2,7 +2,7 @@
     position: relative;
     border-radius: 23px;
     background: #fff;
-    margin: 10px 0;
+    margin: 20px 0;
     box-shadow: 5px 5px 10px 1px #E9E9E9;
     &__header {
         display: flex;
@@ -21,6 +21,7 @@
     &__label_new {
         display: flex;
         background: #99E2D0;
+        color: #008766;
         padding: 5px 10px;
         border-radius: 5px;
         font-weight: bold;
@@ -33,11 +34,15 @@
         background: #fff;
         border-radius: 0 0 16px 16px;
         position: relative;
+        line-height:25px;
         >i {
             position: absolute;
             top: 30px;
             right: 20px;
             font-size: x-large;
+        }
+        >p {
+            font-weight: 300;
         }
     }
 }

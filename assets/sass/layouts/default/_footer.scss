@@ -2,6 +2,10 @@
     background: #353535;
     color: #fff;
     padding: 30px;
+    &__list{
+        font-weight: 500;
+        padding:10px 0;
+    }
     &__link {
         display: flex;
         i {
@@ -12,4 +16,7 @@
             margin-right: 10px;
         }
     }
+        img {
+            height:17px;
+        }
 }
