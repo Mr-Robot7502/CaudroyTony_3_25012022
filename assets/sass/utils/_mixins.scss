@@ -26,5 +26,10 @@
         width: 100%;
         margin: 0 auto;
     }
+    &--like{
+        background: $color-white;
+        border: none;
+        padding-right: 15px;
+    }
 
 }

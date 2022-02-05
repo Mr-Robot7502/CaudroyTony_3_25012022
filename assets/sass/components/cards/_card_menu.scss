@@ -1,3 +1,4 @@
+
 .card_menu {
     display: flex;
     justify-content: space-between;
@@ -9,8 +10,33 @@
     box-shadow: 5px 5px 5px 5px#E9E9E9;
     text-overflow: ellipsis;
     flex-wrap: nowrap;
-  }
-  .price {
+  
+  &__price {
+    font-weight: 600;
     font-size: bold;
   }
-  
+   }
+ .menu {
+  background: #f6f6f6;
+  border-radius: 20px 20px 0 0;
+  margin-top: -60px;
+  padding: 25px 10px 25px 10px;
+  position: relative;
+    &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    >i {
+      font-size: 25px;
+      padding-right: 15px;
+    }
+  }
+    &__list {
+    > h1 {
+      font-family: "Roboto", sans-serif;
+      padding-left: 10px;
+        }
+    }
+  }
+ 
