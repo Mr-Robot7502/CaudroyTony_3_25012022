@@ -46,6 +46,37 @@ button {
   font-size: 2.75rem;
 }
 
+@keyframes fadeout {
+  from {
+    z-index: 1;
+    opacity: 1;
+  }
+  to {
+    z-index: 1;
+    opacity: 0;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes slidein {
+  from {
+    bottom: -20px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
 .btn {
   padding: 1.5rem;
   color: #ffffff;
@@ -143,11 +174,6 @@ button {
   top: 15px;
   right: 15px;
 }
-.card__footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .card__description {
   padding: 10px 20px;
   background: #fff;
@@ -155,14 +181,13 @@ button {
   position: relative;
   line-height: 25px;
 }
-.card__description > i {
-  position: absolute;
-  top: 30px;
-  right: 20px;
-  font-size: x-large;
-}
 .card__description > p {
   font-weight: 300;
+}
+.card__description .like-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .functioning {
@@ -201,42 +226,108 @@ button {
 }
 
 .card_menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  background-color: #fff;
-  padding: 15px;
+  background-color: #ffffff;
   border-radius: 12px;
   margin: 15px 0;
   box-shadow: 5px 5px 5px 5px #E9E9E9;
-  text-overflow: ellipsis;
-  flex-wrap: nowrap;
+  animation: slidein 1s ease-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  position: relative;
+  overflow: hidden;
 }
-.card_menu__price {
+.card_menu__content {
+  transition: all 0.3s linear;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  padding: 15px;
+  width: 100%;
+}
+.card_menu__content .card_menu__price {
   font-weight: 600;
   font-size: bold;
 }
-
-.menu {
-  background: #f6f6f6;
-  border-radius: 20px 20px 0 0;
-  margin-top: -60px;
-  padding: 25px 10px 25px 10px;
-  position: relative;
+.card_menu__content .card_menu__title {
+  width: 100%;
+  transition: all 0.4s linear;
 }
-.menu__title {
-  display: flex;
-  justify-content: space-between;
+.card_menu__content .card_menu__title > p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.card_menu__add_btn {
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
-  padding-bottom: 20px;
+  font-size: 2.5rem;
+  width: 70px;
+  position: absolute;
+  top: 0;
+  bottom: 0px;
+  background-color: #99e2d0;
+  color: #ffffff;
 }
-.menu__title > i {
-  font-size: 25px;
-  padding-right: 15px;
+.card_menu__add_btn > i {
+  transition: all 0.4s linear;
 }
-.menu__list > h1 {
-  font-family: "Roboto", sans-serif;
-  padding-left: 10px;
+.card_menu:hover {
+  cursor: pointer;
+}
+.card_menu:hover .card_menu__content {
+  margin-right: -70px;
+  padding-right: 85px;
+}
+.card_menu:hover .card_menu__content .card_menu__title {
+  width: 85%;
+}
+.card_menu:hover .card_menu__add_btn > i {
+  transform: rotate(360deg);
+}
+.card_menu:nth-child(1) {
+  animation-delay: 100ms;
+}
+.card_menu:nth-child(2) {
+  animation-delay: 200ms;
+}
+.card_menu:nth-child(3) {
+  animation-delay: 300ms;
+}
+.card_menu:nth-child(4) {
+  animation-delay: 400ms;
+}
+.card_menu:nth-child(5) {
+  animation-delay: 500ms;
+}
+.card_menu:nth-child(6) {
+  animation-delay: 600ms;
+}
+.card_menu:nth-child(7) {
+  animation-delay: 700ms;
+}
+.card_menu:nth-child(8) {
+  animation-delay: 800ms;
+}
+.card_menu:nth-child(9) {
+  animation-delay: 900ms;
+}
+
+.like-btn {
+  cursor: pointer;
+  font-size: x-large;
+}
+.like-btn:hover {
+  animation: fill 0.3s ease-in-out;
+  display: inline-block;
+  opacity: 1;
+  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background-clip: text;
+  background: -webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 header {
@@ -274,8 +365,41 @@ header i {
 .footer__link a {
   color: #fff;
 }
+.footer__link a:hover {
+  text-decoration: underline;
+}
 .footer img {
   height: 17px;
+}
+
+.loader {
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  position: fixed;
+  animation: fadeout 2s linear;
+  z-index: -1;
+  opacity: 0;
+}
+.loader::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 200px;
+  border: 10px solid #9356DC;
+  border-top: 10px solid #FF79DA;
+  border-bottom: 10px solid #99E2D0;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+  z-index: 1;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.03, 1.13, 1, 0.9);
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .logo {
@@ -313,21 +437,22 @@ header i {
 
 .menu {
   background: #f6f6f6;
-  border-radius: 50px 50px 0 0;
+  border-radius: 20px 20px 0 0;
   margin-top: -60px;
   padding: 25px 10px 25px 10px;
+  position: relative;
 }
 .menu__list {
   padding: 10px 0;
 }
-.menu__list h1 {
+.menu__list h2 {
   font-family: "Roboto", sans-serif;
   font-size: large;
   font-weight: 300;
   padding: 10px 0 20px 10px;
   position: relative;
 }
-.menu__list h1:after {
+.menu__list h2:after {
   content: "";
   width: 45px;
   height: 3px;

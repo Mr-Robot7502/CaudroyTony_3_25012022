@@ -1,42 +1,68 @@
-
 .card_menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    background-color: #fff;
-    padding: 15px;
+    background-color: $color-white;
     border-radius: 12px;
     margin: 15px 0;
     box-shadow: 5px 5px 5px 5px#E9E9E9;
-    text-overflow: ellipsis;
-    flex-wrap: nowrap;
-  
-  &__price {
-    font-weight: 600;
-    font-size: bold;
-  }
-   }
- .menu {
-  background: #f6f6f6;
-  border-radius: 20px 20px 0 0;
-  margin-top: -60px;
-  padding: 25px 10px 25px 10px;
-  position: relative;
-    &__title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 20px;
-    >i {
-      font-size: 25px;
-      padding-right: 15px;
-    }
-  }
-    &__list {
-    > h1 {
-      font-family: "Roboto", sans-serif;
-      padding-left: 10px;
+    animation: slidein 1s ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    position: relative;
+    overflow: hidden;
+    &__content {
+        transition: all .3s linear;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: nowrap;
+        padding: 15px;
+        width: 100%;
+        .card_menu__price {
+            font-weight: 600;
+            font-size: bold;
+        }
+        .card_menu__title {
+            width: 100%;
+            transition: all .4s linear;
+            >p {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
         }
     }
-  }
- 
+    &__add_btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5rem;
+        width: 70px;
+        position: absolute;
+        top: 0;
+        bottom: 0px;
+        background-color: $color-accent;
+        color: $color-white;
+        &>i {
+            transition: all .4s linear;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        .card_menu__content {
+            margin-right: -70px;
+            padding-right: 85px;
+            .card_menu__title {
+                width: 85%;
+            }
+        }
+        .card_menu__add_btn {
+            &>i {
+                transform: rotate(360deg);
+            }
+        }
+    }
+    @for $i from 1 through 9 {
+        &:nth-child(#{$i}) {
+            animation-delay: 100ms * $i;
+        }
+    }
+}

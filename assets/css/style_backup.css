@@ -17,62 +17,42 @@
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
 
-  .functioning__list {
+  .card_icon__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  .functioning__list>h2 {
-    width: 100%;
-  }
-
-  .functioning__card {
+  .card_icon {
     width: 28%;
   }
 
-  .restaurants {
-    display: flex;
+  .card_list {
+    display:flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .restaurants>h2 {
-    width: 100%;
+    justify-content:space-around;
   }
 
   .card {
-    width: 49%;
+    width: 48%;
   }
 
 }
 
 @media only screen and (min-width: 993px) {
 
-  .functioning__list {
+  .card_icon__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
-  .functioning__list>h2 {
-    width: 100%;
-  }
-
-  .functioning__card {
-    width: 28%;
-  }
-
-  .restaurants {
-    display: flex;
-  }
-
-  .restaurants>h2 {
-    width: 100%;
+  .card_icon {
+    width: 30%;
   }
 
   .card {
-    width: 22%;
+    width: 48%;
   }
 }
   /*# sourceMapping URL=style.css.map */

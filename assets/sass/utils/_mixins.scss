@@ -19,17 +19,28 @@
     }
     &--rounded {
         border-radius: 38px;
-        margin:20px;
+        margin: 20px;
         font-weight: 500;
     }
     &--full-width {
         width: 100%;
         margin: 0 auto;
     }
-    &--like{
+    &--like {
         background: $color-white;
         border: none;
         padding-right: 15px;
     }
+}
 
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
 }
