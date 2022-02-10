@@ -39,3 +39,15 @@
 // @include for-tablet { => mixin
 //     property: value;
 // }
+@include tablet {
+    .card_icon_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+@include desktop {
+    .card_icon {
+        width:28%
+    }
+}

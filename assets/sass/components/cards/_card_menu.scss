@@ -66,3 +66,12 @@
         }
     }
 }
+@include desktop {
+    .menu__grid {
+        display:flex;
+        justify-content: space-between;
+    }
+    .menu__list {
+        width:31%
+    }
+}
