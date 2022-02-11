@@ -198,22 +198,11 @@ button {
     width: 48%;
   }
 }
-/*
-@include desktop {
-    .card_list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content:space-between;
-    }
-    .card {
-        width: 22%;
-    }
+@media screen and (min-width: 1200px) {
+  .card {
+    width: 22%;
+  }
 }
-@include xldesktop {
-    .card {
-        width:23%
-    }
-}*/
 .functioning {
   padding: 50px 0;
 }

@@ -36,9 +36,7 @@
     }
 }
 
-// @include for-tablet { => mixin
-//     property: value;
-// }
+
 @include tablet {
     .card_icon_list {
         display: flex;
