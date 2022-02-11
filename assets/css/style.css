@@ -135,9 +135,6 @@ button {
   font-size: 25px;
   padding: 10px;
 }
-.jumbotron > p {
-  font-style: 17px;
-}
 .jumbotron .jumbotron > * {
   margin: 5px 0;
 }
@@ -286,7 +283,6 @@ button {
 }
 .card_menu__content .card_menu__price {
   font-weight: 600;
-  font-size: bold;
 }
 .card_menu__content .card_menu__title {
   width: 100%;
@@ -476,6 +472,7 @@ header i {
   border-radius: 25px;
   box-shadow: 5px 5px 10px 1px #E9E9E9;
   position: relative;
+  cursor: pointer;
 }
 
 .page_picture > img {
