@@ -27,6 +27,11 @@
                 white-space: nowrap;
                 overflow: hidden;
             }
+            >h3 {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
         }
     }
     &__add_btn {

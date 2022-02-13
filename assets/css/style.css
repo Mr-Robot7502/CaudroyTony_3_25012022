@@ -282,6 +282,11 @@ button {
   white-space: nowrap;
   overflow: hidden;
 }
+.card_menu__content .card_menu__title > h3 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 .card_menu__add_btn {
   display: inline-flex;
   justify-content: center;
